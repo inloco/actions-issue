@@ -1,0 +1,10 @@
+on: push
+jobs:
+  one:
+    runs-on: self-hosted
+    steps:
+      - env:
+          B: ${{ env.A }}
+        run: |
+          echo "B: $B"
+          echo "A: $A"
